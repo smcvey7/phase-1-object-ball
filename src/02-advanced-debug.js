@@ -25,4 +25,23 @@ function goodPractices() {
 }
 
 // then, call the function so it runs!
-goodPractices()
+goodPractices
+
+numPointsScored = (name) => {
+  let game = gameObject();
+  for (let teamType in game){
+      debugger;
+      let type = game[teamType];
+      debugger;
+      for (let info in type){
+          let playerStats = info.player;
+          debugger;
+          if (name in playerStats){
+              debugger;
+              return playerStats.name.points
+          }
+      }
+  }
+}
+
+numPointsScored()
